@@ -1,22 +1,3 @@
-// menu interaktiv machen
-// slash-commands:
-//      /commands
-//      /score
-//      /hp
-//      /called
-//      /quit
-//      /menu
-//          make it then print 'weak'
-// take response without <cr> 
-// modes:
-//      view mode
-//          just list all the cities
-//          search by letter
-//  settings:
-//      only one try
-//      delete cities named by machine
-//      play against yourself
-
 const de = require('./germany.ts')
 const rl = require('readline').createInterface({
     input: process.stdin,
@@ -80,7 +61,7 @@ function play() {
     // Ask for input
     rl.question('', (input: string) => {
         input = checkSpaces(input)
-        if (input[0] === '/') { // TODO change
+        if (input[0] === '/') {
             command(input)
         } else if (validInput(output, input)) {
             outputLetter = lastLetter(input)
@@ -105,7 +86,7 @@ function checkSpaces(input: string): string {
 
 function validInput(output: string, input: string) {
     return de.cities.includes(input)
-    && input[0].toLowerCase() === lastLetter(output) // TODO change
+    && input[0].toLowerCase() === lastLetter(output)
 }
 
 function lastLetter(string: string): string {
@@ -120,7 +101,7 @@ function command (input: string) {
         case 'quit':
             process.exit()
         default:
-            console.log('undefined') // TODO
+            console.log('i haven\'t implemented this command yet. Please be patient.')
             break
     }
     play()
