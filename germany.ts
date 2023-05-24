@@ -4,17 +4,17 @@ const about = `
   / _ \\ | '_ \\ / _ \\| | | | __|
  / ___ \\| |_) | (_) | |_| | |_ 
 /_/   \\_\\_.__/ \\___/ \\__,_|\\__|
-\x1b[33mthe game
 
-This is a small CLI game written with Node.js
+\x1b[33mThis is a small CLI game written with Node.js
 and is the first real project made by me.
 
 I decided to implement this kind of game because
 I wanted something in the command line that required
 automated responses by the script.
+
 \x1b[90m.............................................
 
-\x1b[92m< enter > \x1b[94mBack to menu\x1b[0m
+\x1b[92m< any > \x1b[94mBack to menu\x1b[0m
 `
 
 const menu = `
@@ -35,8 +35,8 @@ const menu = `
 \x1b[92m< q > \x1b[94mQuit\x1b[0m
 `
 
-const rules = `
-\x1b[33mThe
+const rules = [
+    `
 \x1b[92m ____        _           
 |  _ \\ _   _| | ___  ___ 
 | |_) | | | | |/ _ \\/ __|
@@ -45,13 +45,73 @@ const rules = `
 
 \x1b[33mYou are given the name of a German city.
 
-Write the name of another one that starts
-with the last letter of the given city.
-
+Write the \x1b[36m(German)\x1b[33m name of another one that
+starts with the last letter of the given city.
 The game is going to repond likewise.
+
+\x1b[90m[ 1/3 ] .....................................
+
+\x1b[92m< n >       \x1b[94mView next page\x1b[0m
+\x1b[92m< else >    \x1b[94mBack to menu\x1b[0m
+`,
+    `
+
+\x1b[33mIf the name of the given city ...
+
+1. ends with 'y':              \x1b[36mBarb\x1b[31my
+\x1b[33m2. has a '/' in it:         \x1b[36mGarz\x1b[31m/\x1b[36mRügen
+
+\x1b[33m... then you can just assume that the
+previous letter is the last one:
+
+\x1b[36mBar\x1b[31mb\x1b[36my
+\x1b[36mGar\x1b[31mz\x1b[36m/Rügen
+
+\x1b[90m[ 2/3 ] .....................................
+
+\x1b[92m< n >       \x1b[94mView next page\x1b[0m
+\x1b[92m< else >    \x1b[94mBack to menu\x1b[0m
+`,
+    `
+\x1b[33mYou can use these commands in-game:
+
+\x1b[92m/clear      \x1b[94mClear screen
+\x1b[92m/commands   \x1b[94mList available commands
+\x1b[92m/quit       \x1b[94mQuit the game
+\x1b[92m/stats      \x1b[94mShow your score and HP
+\x1b[92m/written    \x1b[94mShow called input
+
+
+
+
+\x1b[90m[ 3/3 ] .....................................
+
+\x1b[92m< n >       \x1b[94mView first page\x1b[0m
+\x1b[92m< else >    \x1b[94mBack to menu\x1b[0m
+`
+]
+
+const commands = `
+\x1b[92m/clear      \x1b[94mClear screen
+\x1b[92m/commands   \x1b[94mList available commands
+\x1b[92m/quit       \x1b[94mQuit the game
+\x1b[92m/stats      \x1b[94mShow your score and HP
+\x1b[92m/written    \x1b[94mShow called input
+`
+
+const settingsBanner = `
+\x1b[94m ____       _   _   _                 
+/ ___|  ___| |_| |_(_)_ __   __ _ ___ 
+\\___ \\ / _ \\ __| __| | '_ \\ / _\` / __|
+ ___) |  __/ |_| |_| | | | | (_| \\__ \\
+|____/ \\___|\\__|\\__|_|_| |_|\\__, |___/
+                            |___/     \x1b[0m
+`
+
+const options = `
 \x1b[90m.............................................
 
-\x1b[92m< enter > \x1b[94mBack to menu\x1b[0m
+\x1b[92m< number > \x1b[94mTune setting\x1b[0m
 `
 
 const cities = [
@@ -582,8 +642,8 @@ const cities = [
     'Frankenberg',
     'Frankenberg/Sa.',
     'Frankenthal',
-    'Frankfurt',
     'Frankfurt am Main',
+    'Frankfurt an der Oder',
     'Franzburg',
     'Frauenstein',
     'Frechen',
@@ -2116,5 +2176,8 @@ module.exports = {
     about,
     menu,
     rules,
+    commands,
+    settingsBanner,
+    options,
     cities
 }
