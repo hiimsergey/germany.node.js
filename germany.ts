@@ -112,6 +112,7 @@ const options = `
 \x1b[90m.............................................
 
 \x1b[92m< number > \x1b[94mTune setting\x1b[0m
+\x1b[92m< else > \x1b[94mBack to menu\x1b[0m
 `
 
 const cities = [
