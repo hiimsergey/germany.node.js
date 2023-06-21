@@ -58,7 +58,7 @@ The game is going to repond likewise.
 
 \x1b[33mIf the name of the given city ...
 
-1. ends with 'y':              \x1b[36mBarb\x1b[31my
+1. ends with 'y' or 'ß':              \x1b[36mBarb\x1b[31my
 \x1b[33m2. has a '/' in it:         \x1b[36mGarz\x1b[31m/\x1b[36mRügen
 
 \x1b[33m... then you can just assume that the
