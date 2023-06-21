@@ -156,7 +156,8 @@ function validInput(input: string, output: string) {
 
 function lastLetter(string: string): string {
     if (string.includes('/')) return string[string.indexOf('/') - 1]
-    if (string[string.length - 1] === 'y') return string[string.length - 2]
+    if (string[string.length - 1] === 'y' ||
+        string[string.length - 1] === 'ß') return string[string.length - 2]
     return string[string.length - 1]
 }
 
