@@ -6,7 +6,7 @@ const about = `
 /_/   \\_\\_.__/ \\___/ \\__,_|\\__|
 
 \x1b[33mThis is a small CLI game written with Node.js
-and is the first real project made by me.
+and the first real project made by me.
 
 I decided to implement this kind of game because
 I wanted something in the command line that required
