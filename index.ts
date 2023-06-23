@@ -83,8 +83,8 @@ You wrote \x1b[33m${written.length} \x1b[31mcities correctly.
 Possible answer to last city: \x1b[36m${filter[Math.floor(Math.random() * filter.length)]}
 \x1b[90m.............................................
  
-\x1b[92m<  q   > \x1b[94mQuit
-\x1b[92m< else > \x1b[94mMenu\x1b[0m
+\x1b[92m   q    | \x1b[94mQuit
+\x1b[92m <else> | \x1b[94mMenu\x1b[0m
 `), 500)
                 rl.question('', (gameOverInput: string) => {
                     if (gameOverInput === 'q') {
