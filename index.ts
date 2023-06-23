@@ -128,7 +128,12 @@ ${de.settingsBanner}
 ${de.options}
 `)
     rl.question('', (settingsInput: any) => {
-        if (!isNaN(settingsInput) && settingsInput !== '') {
+        if (
+            settingsInput !== ''
+            && !settingsInput.includes('-')
+            && !settingsInput.includes('.')
+            && !isNaN(settingsInput)
+        ) {
             settings = Number(settingsInput)
             openSettings()
         }
@@ -155,9 +160,15 @@ function validInput(input: string, output: string) {
 }
 
 function lastLetter(string: string): string {
-    if (string.includes('/')) return string[string.indexOf('/') - 1]
-    if (string[string.length - 1] === 'y' ||
-        string[string.length - 1] === 'ß') return string[string.length - 2]
+    switch (true) {
+        case string.includes('/'):
+            return string[string.indexOf('/') - 1]
+            break
+        case string[string.length - 1] === 'y':
+        case string[string.length - 1] === 'ß':
+            return string[string.length - 2]
+            break
+    }
     return string[string.length - 1]
 }
 

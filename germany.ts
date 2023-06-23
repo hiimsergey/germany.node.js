@@ -6,7 +6,7 @@ const about = `
 /_/   \\_\\_.__/ \\___/ \\__,_|\\__|
 
 \x1b[33mThis is a small CLI game written with Node.js
-and the first real project made by me.
+and is the first real project made by me.
 
 I decided to implement this kind of game because
 I wanted something in the command line that required
@@ -14,7 +14,7 @@ automated responses by the script.
 
 \x1b[90m.............................................
 
-\x1b[92m< any > \x1b[94mBack to menu\x1b[0m
+\x1b[92m <any> | \x1b[94mBack to menu\x1b[0m
 `
 
 const menu = `
@@ -28,16 +28,16 @@ const menu = `
 \x1b[33mThe Game
 \x1b[90m.............................................
 
-\x1b[92m< p > \x1b[94mPlay
-\x1b[92m< s > \x1b[94mSettings
-\x1b[92m< r > \x1b[94mRules
-\x1b[92m< a > \x1b[94mAbout
-\x1b[92m< q > \x1b[94mQuit\x1b[0m
+\x1b[92m p | \x1b[94mPlay
+\x1b[92m s | \x1b[94mSettings
+\x1b[92m r | \x1b[94mRules
+\x1b[92m a | \x1b[94mAbout
+\x1b[92m q | \x1b[94mQuit\x1b[0m
 `
 
 const rules = [
-    `
-\x1b[92m ____        _           
+    `\x1b[92m
+ ____        _           
 |  _ \\ _   _| | ___  ___ 
 | |_) | | | | |/ _ \\/ __|
 |  _ <| |_| | |  __/\\__ \\
@@ -51,29 +51,29 @@ The game is going to repond likewise.
 
 \x1b[90m[ 1/3 ] .....................................
 
-\x1b[92m< n >       \x1b[94mView next page\x1b[0m
-\x1b[92m< else >    \x1b[94mBack to menu\x1b[0m
+\x1b[92m   n    | \x1b[94mView next page\x1b[0m
+\x1b[92m <else> | \x1b[94mBack to menu\x1b[0m
 `,
     `
-
 \x1b[33mIf the name of the given city ...
 
-1. ends with 'y' or 'ß':              \x1b[36mBarb\x1b[31my
+1. ends with 'y' or 'ß':    \x1b[36mBarb\x1b[31my
 \x1b[33m2. has a '/' in it:         \x1b[36mGarz\x1b[31m/\x1b[36mRügen
 
 \x1b[33m... then you can just assume that the
 previous letter is the last one:
 
-\x1b[36mBar\x1b[31mb\x1b[36my
-\x1b[36mGar\x1b[31mz\x1b[36m/Rügen
+                            \x1b[36mBar\x1b[31mb\x1b[36my
+                            \x1b[36mGar\x1b[31mz\x1b[36m/Rügen
+
 
 \x1b[90m[ 2/3 ] .....................................
 
-\x1b[92m< n >       \x1b[94mView next page\x1b[0m
-\x1b[92m< else >    \x1b[94mBack to menu\x1b[0m
+\x1b[92m   n    | \x1b[94mView next page\x1b[0m
+\x1b[92m <else> | \x1b[94mBack to menu\x1b[0m
 `,
-    `
-\x1b[33mYou can use these commands in-game:
+    `\x1b[33m
+You can use these commands in-game:
 
 \x1b[92m/clear      \x1b[94mClear screen
 \x1b[92m/commands   \x1b[94mList available commands
@@ -84,10 +84,11 @@ previous letter is the last one:
 
 
 
+
 \x1b[90m[ 3/3 ] .....................................
 
-\x1b[92m< n >       \x1b[94mView first page\x1b[0m
-\x1b[92m< else >    \x1b[94mBack to menu\x1b[0m
+\x1b[92m   n    | \x1b[94mView first page\x1b[0m
+\x1b[92m <else> | \x1b[94mBack to menu\x1b[0m
 `
 ]
 
@@ -111,8 +112,8 @@ const settingsBanner = `
 const options = `
 \x1b[90m.............................................
 
-\x1b[92m< number > \x1b[94mTune setting\x1b[0m
-\x1b[92m< else > \x1b[94mBack to menu\x1b[0m
+\x1b[92m <num> | \x1b[94mTune setting\x1b[0m
+\x1b[92m enter | \x1b[94mBack to menu\x1b[0m
 `
 
 const cities = [
@@ -1376,8 +1377,8 @@ const cities = [
     'Neusalza-Spremberg',
     'Neuss',
     'Neustadt',
-    'Neustadt',
     'Neustadt am Kulm',
+    'Neustadt am Main',
     'Neustadt am Rübenberge',
     'Neustadt an der Aisch',
     'Neustadt an der Donau',
